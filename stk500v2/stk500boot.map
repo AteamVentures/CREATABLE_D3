@@ -1,0 +1,622 @@
+Archive member included because of file (symbol)
+
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+                              stk500boot.o (__divmodhi4)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodsi4.o)
+                              stk500boot.o (__udivmodsi4)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o (exit)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+                              stk500boot.o (__do_clear_bss)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodhi4.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+gEepromIndex        0x4               stk500boot.o
+gFlashIndex         0x4               stk500boot.o
+gRamIndex           0x4               stk500boot.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+LOAD stk500boot.o
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/libm.a
+Address of section .text set to 0x1e000
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/libc.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0001e000     0x23b6
+ *(.vectors)
+ .vectors       0x0001e000       0xe4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+                0x0001e000                __vectors
+                0x0001e000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0001e0e4      0x22e stk500boot.o
+                0x0001e262                gTextMsg_EEPROMerrorCnt
+                0x0001e17b                gTextMsg_FUSE_BYTE_LOW
+                0x0001e2df                gTextMsg_HELP_MSG_R
+                0x0001e15d                gTextMsg_GCC_VERSION
+                0x0001e2b3                gTextMsg_HELP_MSG_F
+                0x0001e249                gTextMsg_SPACE
+                0x0001e1cf                gTextMsg_VECTOR_HEADER
+                0x0001e2a5                gTextMsg_HELP_MSG_E
+                0x0001e2c0                gTextMsg_HELP_MSG_H
+                0x0001e11c                gTextMsg_HUH
+                0x0001e0e4                gTextMsg_CPU_Name
+                0x0001e238                gTextMsg_MustBeLetter
+                0x0001e1c3                gTextMsg_AVR_LIBC_VER_STR
+                0x0001e303                gTextMsg_HELP_MSG_Y
+                0x0001e28b                gTextMsg_HELP_MSG_AT
+                0x0001e2d8                gTextMsg_HELP_MSG_Q
+                0x0001e310                gTextMsg_END
+                0x0001e24b                gTextMsg_WriteToEEprom
+                0x0001e225                gTextMsg_PortNotSupported
+                0x0001e20e                gTextMsg_rjmp
+                0x0001e14e                gTextMsg_AVR_LIBC
+                0x0001e21a                gTextMsg_WHAT_PORT
+                0x0001e2c7                gTextMsg_HELP_MSG_L
+                0x0001e121                gTextMsg_COMPILED_ON
+                0x0001e27f                gTextMsg_HELP_MSG_QM
+                0x0001e1c9                gTextMsg_GCC_VERSION_STR
+                0x0001e204                gTextMsg_noVector
+                0x0001e1a8                gTextMsg_FUSE_BYTE_LOCK
+                0x0001e299                gTextMsg_HELP_MSG_B
+                0x0001e257                gTextMsg_ReadingEEprom
+                0x0001e13f                gTextMsg_AVR_ARCH
+                0x0001e110                gTextMsg_Prompt
+                0x0001e0ef                gTextMsg_Explorer
+                0x0001e2ea                gTextMsg_HELP_MSG_V
+                0x0001e273                gTextMsg_HELP_MSG_0
+                0x0001e130                gTextMsg_CPU_Type
+                0x0001e199                gTextMsg_FUSE_BYTE_EXT
+                0x0001e215                gTextMsg_jmp
+                0x0001e26e                gTextMsg_PORT
+                0x0001e18a                gTextMsg_FUSE_BYTE_HIGH
+                0x0001e1b7                gTextMsg_GCC_DATE_STR
+                0x0001e16c                gTextMsg_CPU_SIGNATURE
+                0x0001e312                . = ALIGN (0x2)
+                0x0001e312                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0001e312        0x0 linker stubs
+ *(.trampolines*)
+                0x0001e312                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0001e312                __ctors_start = .
+ *(.ctors)
+                0x0001e312                __ctors_end = .
+                0x0001e312                __dtors_start = .
+ *(.dtors)
+                0x0001e312                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0001e312        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+                0x0001e312                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0001e312        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0001e31e       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+                0x0001e31e                __do_copy_data
+ .init4         0x0001e33a       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+                0x0001e33a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0001e34a        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+ .init9         0x0001e352       0x10 stk500boot.o
+                0x0001e352                __jumpMain
+ *(.init9)
+ *(.text)
+ .text          0x0001e362        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+                0x0001e362                __vector_38
+                0x0001e362                __vector_22
+                0x0001e362                __vector_28
+                0x0001e362                __vector_1
+                0x0001e362                __vector_32
+                0x0001e362                __vector_34
+                0x0001e362                __vector_24
+                0x0001e362                __vector_12
+                0x0001e362                __vector_55
+                0x0001e362                __vector_46
+                0x0001e362                __bad_interrupt
+                0x0001e362                __vector_6
+                0x0001e362                __vector_31
+                0x0001e362                __vector_35
+                0x0001e362                __vector_39
+                0x0001e362                __vector_3
+                0x0001e362                __vector_23
+                0x0001e362                __vector_30
+                0x0001e362                __vector_45
+                0x0001e362                __vector_25
+                0x0001e362                __vector_11
+                0x0001e362                __vector_54
+                0x0001e362                __vector_13
+                0x0001e362                __vector_17
+                0x0001e362                __vector_19
+                0x0001e362                __vector_56
+                0x0001e362                __vector_7
+                0x0001e362                __vector_49
+                0x0001e362                __vector_41
+                0x0001e362                __vector_43
+                0x0001e362                __vector_27
+                0x0001e362                __vector_5
+                0x0001e362                __vector_33
+                0x0001e362                __vector_47
+                0x0001e362                __vector_52
+                0x0001e362                __vector_37
+                0x0001e362                __vector_4
+                0x0001e362                __vector_44
+                0x0001e362                __vector_51
+                0x0001e362                __vector_9
+                0x0001e362                __vector_2
+                0x0001e362                __vector_21
+                0x0001e362                __vector_15
+                0x0001e362                __vector_36
+                0x0001e362                __vector_29
+                0x0001e362                __vector_40
+                0x0001e362                __vector_8
+                0x0001e362                __vector_26
+                0x0001e362                __vector_48
+                0x0001e362                __vector_14
+                0x0001e362                __vector_53
+                0x0001e362                __vector_10
+                0x0001e362                __vector_50
+                0x0001e362                __vector_16
+                0x0001e362                __vector_18
+                0x0001e362                __vector_20
+                0x0001e362                __vector_42
+ .text          0x0001e366     0x1fba stk500boot.o
+                0x0001e382                PrintFromPROGMEM
+                0x0001e44c                PrintString
+                0x0001e3e8                PrintFromPROGMEMln
+                0x0001e4c0                PrintDecInt
+                0x0001e7b4                main
+                0x0001e366                delay_ms
+                0x0001e472                PrintHexByte
+                0x0001e3b6                PrintNewLine
+ .text          0x00020320        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+ .text          0x00020320        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodsi4.o)
+ .text          0x00020320        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+ .text          0x00020320        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+ .text          0x00020320        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodhi4.o)
+                0x00020320                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00020320       0x26 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+                0x00020320                __divmodhi4
+                0x00020320                _div
+ .text.libgcc   0x00020346       0x44 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodsi4.o)
+                0x00020346                __udivmodsi4
+ .text.libgcc   0x0002038a        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+ .text.libgcc   0x0002038a        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0002038a       0x28 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodhi4.o)
+                0x0002038a                __udivmodhi4
+                0x000203b2                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000203b2        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+                0x000203b2                exit
+                0x000203b2                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000203b2        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000203b6                _etext = .
+
+.data           0x00800200        0x0 load address 0x000203b6
+                0x00800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+ .data          0x00800200        0x0 stk500boot.o
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodsi4.o)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodhi4.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800200                . = ALIGN (0x2)
+                0x00800200                _edata = .
+                0x00800200                PROVIDE (__data_end, .)
+
+.bss            0x00800200        0xe
+                0x00800200                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+ .bss           0x00800200        0x2 stk500boot.o
+                0x00800200                app_start
+ .bss           0x00800202        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+ .bss           0x00800202        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodsi4.o)
+ .bss           0x00800202        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+ .bss           0x00800202        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+ .bss           0x00800202        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodhi4.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800202        0xc stk500boot.o
+                0x00800202                gEepromIndex
+                0x00800206                gFlashIndex
+                0x0080020a                gRamIndex
+                0x0080020e                PROVIDE (__bss_end, .)
+                0x000203b6                __data_load_start = LOADADDR (.data)
+                0x000203b6                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080020e        0x0
+                0x0080020e                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080020e                PROVIDE (__noinit_end, .)
+                0x0080020e                _end = .
+                0x0080020e                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x28
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 stk500boot.o
+
+.debug_pubnames
+                0x00000000      0x4d2
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x4d2 stk500boot.o
+
+.debug_info     0x00000000     0x3408
+ *(.debug_info)
+ .debug_info    0x00000000     0x3408 stk500boot.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x30b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x30b stk500boot.o
+
+.debug_line     0x00000000     0x1eba
+ *(.debug_line)
+ .debug_line    0x00000000     0x1eba stk500boot.o
+
+.debug_frame    0x00000000       0xc0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xc0 stk500boot.o
+
+.debug_str      0x00000000      0x81a
+ *(.debug_str)
+ .debug_str     0x00000000      0x81a stk500boot.o
+                                0x870 (size before relaxing)
+
+.debug_loc      0x00000000     0x1c03
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1c03 stk500boot.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(stk500boot.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x1a0
+ .debug_ranges  0x00000000      0x1a0 stk500boot.o
+
+Cross Reference Table
+
+Symbol                                            File
+PrintDecInt                                       stk500boot.o
+PrintFromPROGMEM                                  stk500boot.o
+PrintFromPROGMEMln                                stk500boot.o
+PrintHexByte                                      stk500boot.o
+PrintNewLine                                      stk500boot.o
+PrintString                                       stk500boot.o
+__bad_interrupt                                   /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__bss_end                                         /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+__bss_start                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+__data_end                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__data_load_start                                 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__data_start                                      /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__divmodhi4                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+                                                  stk500boot.o
+__do_clear_bss                                    /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_clear_bss.o)
+                                                  stk500boot.o
+__do_copy_data                                    /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+                                                  stk500boot.o
+__heap_end                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__init                                            /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__jumpMain                                        stk500boot.o
+__stack                                           /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__udivmodhi4                                      /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodhi4.o)
+                                                  /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+__udivmodsi4                                      /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_udivmodsi4.o)
+                                                  stk500boot.o
+__vector_1                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_10                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_11                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_12                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_13                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_14                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_15                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_16                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_17                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_18                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_19                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_2                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_20                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_21                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_22                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_23                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_24                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_25                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_26                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_27                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_28                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_29                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_3                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_30                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_31                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_32                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_33                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_34                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_35                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_36                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_37                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_38                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_39                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_4                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_40                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_41                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_42                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_43                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_44                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_45                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_46                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_47                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_48                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_49                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_5                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_50                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_51                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_52                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_53                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_54                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_55                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_56                                       /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_6                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_7                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_8                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_9                                        /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vector_default                                  /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+__vectors                                         /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+_div                                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_divmodhi4.o)
+_exit                                             /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+app_start                                         stk500boot.o
+delay_ms                                          stk500boot.o
+exit                                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr51/libgcc.a(_exit.o)
+                                                  /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
+gEepromIndex                                      stk500boot.o
+gFlashIndex                                       stk500boot.o
+gRamIndex                                         stk500boot.o
+gTextMsg_AVR_ARCH                                 stk500boot.o
+gTextMsg_AVR_LIBC                                 stk500boot.o
+gTextMsg_AVR_LIBC_VER_STR                         stk500boot.o
+gTextMsg_COMPILED_ON                              stk500boot.o
+gTextMsg_CPU_Name                                 stk500boot.o
+gTextMsg_CPU_SIGNATURE                            stk500boot.o
+gTextMsg_CPU_Type                                 stk500boot.o
+gTextMsg_EEPROMerrorCnt                           stk500boot.o
+gTextMsg_END                                      stk500boot.o
+gTextMsg_Explorer                                 stk500boot.o
+gTextMsg_FUSE_BYTE_EXT                            stk500boot.o
+gTextMsg_FUSE_BYTE_HIGH                           stk500boot.o
+gTextMsg_FUSE_BYTE_LOCK                           stk500boot.o
+gTextMsg_FUSE_BYTE_LOW                            stk500boot.o
+gTextMsg_GCC_DATE_STR                             stk500boot.o
+gTextMsg_GCC_VERSION                              stk500boot.o
+gTextMsg_GCC_VERSION_STR                          stk500boot.o
+gTextMsg_HELP_MSG_0                               stk500boot.o
+gTextMsg_HELP_MSG_AT                              stk500boot.o
+gTextMsg_HELP_MSG_B                               stk500boot.o
+gTextMsg_HELP_MSG_E                               stk500boot.o
+gTextMsg_HELP_MSG_F                               stk500boot.o
+gTextMsg_HELP_MSG_H                               stk500boot.o
+gTextMsg_HELP_MSG_L                               stk500boot.o
+gTextMsg_HELP_MSG_Q                               stk500boot.o
+gTextMsg_HELP_MSG_QM                              stk500boot.o
+gTextMsg_HELP_MSG_R                               stk500boot.o
+gTextMsg_HELP_MSG_V                               stk500boot.o
+gTextMsg_HELP_MSG_Y                               stk500boot.o
+gTextMsg_HUH                                      stk500boot.o
+gTextMsg_MustBeLetter                             stk500boot.o
+gTextMsg_PORT                                     stk500boot.o
+gTextMsg_PortNotSupported                         stk500boot.o
+gTextMsg_Prompt                                   stk500boot.o
+gTextMsg_ReadingEEprom                            stk500boot.o
+gTextMsg_SPACE                                    stk500boot.o
+gTextMsg_VECTOR_HEADER                            stk500boot.o
+gTextMsg_WHAT_PORT                                stk500boot.o
+gTextMsg_WriteToEEprom                            stk500boot.o
+gTextMsg_jmp                                      stk500boot.o
+gTextMsg_noVector                                 stk500boot.o
+gTextMsg_rjmp                                     stk500boot.o
+main                                              stk500boot.o
+                                                  /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm1280.o
