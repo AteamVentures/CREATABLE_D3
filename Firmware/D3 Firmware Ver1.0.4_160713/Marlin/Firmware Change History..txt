@@ -1,0 +1,6 @@
+Firmware Change History
+
+Ver. 1.0.4
+-. Apply 3 point manual leveling
+-. Add LED control
+-. Add Buzzer on/off
