@@ -303,6 +303,7 @@ float temp_level;
         if (wasClicked && (encoderPosition / ENCODER_STEPS_PER_MENU_ITEM) == _menuItemNr) {\
             lcd_quick_feedback(); \
             menu_action_ ## type ( args ); \
+            Config_StoreSettings();\
             return;\
         }\
     }\
@@ -2612,7 +2613,7 @@ static void lcd_info_settings()
     MENU_ITEM(submenu, MSG_MOVE_AXIS, lcd_move_menu);
 #endif
     // MENU_ITEM(submenu, "ALARM MUSIC", lcd_buzzer_setting);
-    MENU_ITEM_EDIT(bool, "ALARM MUSIC", &music_on);
+    MENU_ITEM_EDIT(bool, "BUZZER", &music_on);
 
     MENU_ITEM(submenu, "LED COLOR", lcd_led_setting);
     MENU_ITEM_EDIT_CUSTOM(int3, "HEATING MINUTE", &heat_hold_minute, 1, 60);
