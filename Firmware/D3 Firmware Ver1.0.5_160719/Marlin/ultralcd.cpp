@@ -2563,7 +2563,12 @@ static void lcd_led_brightValue()
         ledUpdated = false;
         lcd_quick_feedback();
         Config_StoreSettings();
-        currentMenu = lcd_led_setting;
+        if(IS_SD_PRINTING){
+            currentMenu = lcd_tune_menu;
+        }else{
+            currentMenu = lcd_led_setting;
+        }
+        
         encoderPosition = 0;
     }
 }

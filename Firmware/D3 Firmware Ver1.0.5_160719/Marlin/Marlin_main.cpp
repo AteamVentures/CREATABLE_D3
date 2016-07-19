@@ -593,8 +593,11 @@ void setup()
 void loop()
 {
 
-
-
+  if(card.sdprinting){
+    stepper_inactive_time = 9999*1000l;;
+  }else{
+    stepper_inactive_time = DEFAULT_STEPPER_DEACTIVE_TIME*1000l;;
+  }
   if(buflen < (BUFSIZE-1)){
     get_command();
   }
