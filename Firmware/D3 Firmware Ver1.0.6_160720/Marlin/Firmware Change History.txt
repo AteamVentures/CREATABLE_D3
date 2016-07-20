@@ -1,0 +1,13 @@
+Firmware Change History
+Ver. 1.0.6
+-. Delete D2 firmware files
+-. Change Delta Radius Values in configuration.h file
+-. Add D3 Delta Radius Values image
+
+Ver. 1.0.5
+-. While SD Card Printing, stepper deactivate time is changed from 60 to 9999 seconds
+
+Ver. 1.0.4
+-. Apply 3 point manual leveling
+-. Add LED control
+-. Add Buzzer on/off
