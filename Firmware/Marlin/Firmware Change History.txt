@@ -1,4 +1,8 @@
 Firmware Change History
+Ver. 1.0.8
+-. Change DEFAULT_AXIS_STEPS_PER_UNIT Constant for feeder in Configuration.h
+-. Auto Leveling Code is Disabled
+
 Ver. 1.0.7
 -. Filament load function debug
 -. Enable/Disable Unlimit Heating Code add 
