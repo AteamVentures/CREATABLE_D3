@@ -223,7 +223,12 @@ float zprobe_zoffset;
 // int linearG;
 // int linearB;
 
+
 // Extruder offset
+
+bool heatUnlimit;
+
+
 #if EXTRUDERS > 1
 #ifndef DUAL_X_CARRIAGE
   #define NUM_EXTRUDER_OFFSETS 2 // only in XY plane
@@ -588,11 +593,14 @@ void setup()
 
     heatCount = millis();
     isHeat = 0;
+    heatUnlimit = false;
 }
 
 void loop()
 {
-
+  if(heatUnlimit){
+    heatCount = millis();
+  }
   if(card.sdprinting){
     stepper_inactive_time = 9999*1000l;;
   }else{
@@ -4852,7 +4860,14 @@ void process_commands()
         break;  // V129
 
 
+      case 130:     // V130 Heat Unlimit
+        heatUnlimit = true;
+      break;
 
+
+      case 131:     // V131 Heat limit
+        heatUnlimit = false;
+      break;
 
     }
 

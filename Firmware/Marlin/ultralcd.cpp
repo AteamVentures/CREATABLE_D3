@@ -181,8 +181,6 @@ static void filament_setting();
 
 
 static void filament_load();
-static void filament_load_new();
-static void filament_load_wait();
 
 
 static void lcd_firstTime_leveling();
@@ -1059,83 +1057,6 @@ static void reverse_feeding()
 }
 
 
-static void filament_load_new(){
-    char buffer[20];
-    setTargetHotend(FILAMENT_LOAD_TEMP, active_extruder);
-    lcd_implementation_draw_string(0, "WAIT FOR HEATING UP ");
-
-    sprintf(buffer,"CURRENT TEMP:%d", (int)degHotend(active_extruder));
-    lcd_implementation_draw_string(1, "                    ");
-    lcd_implementation_draw_string(1, buffer);
-    lcd_printPGM(PSTR(LCD_STR_DEGREE " "));
-    sprintf(buffer,"TARGET TEMP:%d", preheatHotendTemp);
-    lcd_implementation_draw_string(2, "                    ");
-    lcd_implementation_draw_string(2, buffer);
-    lcd_printPGM(PSTR(LCD_STR_DEGREE " "));
-    lcd_implementation_draw_string(3, "   CLICK TO EXIT    ");
-
-    if (LCD_CLICKED)
-    {
-        lcd_cooldown();
-        lcd_quick_feedback();
-        currentMenu = lcd_status_screen;
-        encoderPosition = 0;
-        prevent_lcd_update = false;
-        return;
-    }    
-    prevent_lcd_update = true;
-    onetime_flag = true;
-
-    currentMenu = filament_load_wait;
-}
-
-static void filament_load_wait(){
-    char buffer[20];
-    heatCount = millis();
-    // setTargetHotend(FILAMENT_LOAD_TEMP, active_extruder);
-    lcd_implementation_draw_string(0, "WAIT FOR HEATING UP ");
-
-    sprintf(buffer,"CURRENT TEMP:%d", (int)degHotend(active_extruder));
-    lcd_implementation_draw_string(1, "                    ");
-    lcd_implementation_draw_string(1, buffer);
-    lcd_printPGM(PSTR(LCD_STR_DEGREE " "));
-    sprintf(buffer,"TARGET TEMP:%d", preheatHotendTemp);
-    lcd_implementation_draw_string(2, "                    ");
-
-    lcd_implementation_draw_string(2, buffer);
-    lcd_printPGM(PSTR(LCD_STR_DEGREE " "));
-    lcd_implementation_draw_string(3, "   CLICK TO EXIT    ");
-
-    if (degHotend(active_extruder) >= FILAMENT_LOAD_TEMP-10) {
-        if (onetime_flag) {
-            enquecommand_P(PSTR("G28"));
-
-            forward_feeding();
-
-            onetime_flag = false;
-
-            prevent_lcd_update = true;
-
-            current_position[E_AXIS] = 0;
-            plan_set_e_position(current_position[E_AXIS]);
-        }
-
-        currentMenu = filament_extrude;
-    }
-
-    if (LCD_CLICKED)
-    {
-        lcd_cooldown();
-        lcd_quick_feedback();
-        currentMenu = lcd_status_screen;
-        encoderPosition = 0;
-        prevent_lcd_update = false;
-        return;
-    }    
-
-
-}
-
 
 
 static void filament_load()
@@ -1147,6 +1068,7 @@ static void filament_load()
     else target_temp = preheatHotendTemp;
 
     setTargetHotend(target_temp, active_extruder);
+    onetime_flag = true;
 
     // while(degHotend(active_extruder) < FILAMENT_LOAD_TEMP){
     while(degHotend(active_extruder) < preheatHotendTemp){
@@ -1167,7 +1089,6 @@ static void filament_load()
         manage_heater();
         manage_inactivity();    
 
-        onetime_flag = true;
 
         // Cancel
         if (LCD_CLICKED)
@@ -1942,7 +1863,7 @@ static void filament_setting_pla()
     lcd_implementation_draw_string(1, buffer);
     START_MENU();   
    
-    MENU_ITEM_CUSTOM(function, "SAVE & EXIT",2, filament_setting_plasave);
+    MENU_ITEM_CUSTOM(function, "SELECT & EXIT",2, filament_setting_plasave);
     MENU_ITEM_CUSTOM(back, MSG_BACK,3, filament_setting);
     END_MENU();
 }
@@ -1959,7 +1880,7 @@ static void filament_setting_abs()
     lcd_implementation_draw_string(1, buffer);
 
     START_MENU();   
-    MENU_ITEM_CUSTOM(function, "SAVE & EXIT",2,filament_setting_abssave);
+    MENU_ITEM_CUSTOM(function, "SELECT & EXIT",2,filament_setting_abssave);
     MENU_ITEM_CUSTOM(back, MSG_BACK, 3,filament_setting);
        
     
@@ -1977,7 +1898,7 @@ static void filament_setting_custom()
     MENU_ITEM_EDIT_CUSTOM(int3, MSG_BED, &preheatHPBTemp, 0, BED_MAXTEMP - 15);
 #endif
 #ifdef EEPROM_SETTINGS
-    MENU_ITEM_CUSTOM(function, "SAVE & EXIT", 2,filament_setting_save);
+    MENU_ITEM_CUSTOM(function, "SELECT & EXIT", 2,filament_setting_save);
     MENU_ITEM_CUSTOM(back, MSG_BACK, 3,filament_setting);
 #endif
     END_MENU();
@@ -1989,9 +1910,9 @@ static void filament_setting()
     
     MENU_ITEM(back, MSG_BACK, lcd_filament_menu);
 
-    MENU_ITEM(submenu, "PLA", filament_setting_pla);
-    MENU_ITEM(submenu, "ABS", filament_setting_abs);
-    MENU_ITEM(submenu, "CUSTOM SETTINGS", filament_setting_custom);
+    MENU_ITEM(submenu, "SELECT PLA", filament_setting_pla);
+    MENU_ITEM(submenu, "SELECT ABS", filament_setting_abs);
+    MENU_ITEM(submenu, "SELECT CUSTOM", filament_setting_custom);
     
     END_MENU();
 }

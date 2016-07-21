@@ -1,4 +1,11 @@
 Firmware Change History
+Ver. 1.0.7
+-. Filament load function debug
+-. Enable/Disable Unlimit Heating Code add 
+	-. V130 : Enable Unlimit Heating
+	-. V131 : Disable Unlimit Heating
+-. Change wording (Select Filament)
+
 Ver. 1.0.6
 -. Delete D2 firmware files
 -. Change Delta Radius Values in configuration.h file
