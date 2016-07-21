@@ -413,12 +413,14 @@ void Config_ResetDefault()
 #endif//PIDTEMP
 
  // 
+#ifdef ENABLE_AUTO_BED_LEVELING    
 set_level_offset(0);
-for(int i = 0 ; i < 3 ; i++){
-    for(int j = 0 ; j < 3 ; j++){
+for(int i = 0 ; i < ACCURATE_BED_LEVELING_POINTS ; i++){
+    for(int j = 0 ; j < ACCURATE_BED_LEVELING_POINTS ; j++){
         bed_level[i][j] = 0;
     }
 } 
+#endif
 // store 
 Config_StoreSettings();
 

@@ -1351,7 +1351,7 @@ static void auto_leveling()
 
     lcd_return_to_status();
 }
-
+#endif
 
 
 static void clean_nozzle()
@@ -1375,7 +1375,7 @@ static void clean_nozzle()
         currentMenu = lcd_status_screen;
     }
 }
-#endif
+
 
 
 //**************************************************/
@@ -1397,11 +1397,13 @@ static void manual_leveling()
 
 static void leveling_procedure_0()
 {
-    for(int i = 0 ; i < 3 ; i++){
-        for(int j = 0 ; j < 3 ; j++){
+#ifdef ENABLE_AUTO_BED_LEVELING        
+    for(int i = 0 ; i < ACCURATE_BED_LEVELING_POINTS ; i++){
+        for(int j = 0 ; j < ACCURATE_BED_LEVELING_POINTS ; j++){
             bed_level[i][j] = 0;
         }
     }
+#endif
 
     Config_StoreSettings();
     currentMenu = leveling_procedure_1;
@@ -1540,6 +1542,7 @@ static void leveling_save()
 //**************************************************
 #ifdef ENABLE_Z_OFFSET
 
+#if 0
 static void print_bed_level() {
   for (int y = 0; y < ACCURATE_BED_LEVELING_POINTS; y++) {
     for (int x = 0; x < ACCURATE_BED_LEVELING_POINTS; x++) {
@@ -1606,6 +1609,7 @@ static void lcd_move_z()
                 bed_level[x][y]+=get_level_offset();
             }
         }
+
         Config_StoreSettings();
         print_bed_level();
         
@@ -1663,6 +1667,7 @@ static void move_offset(){
 
 }
 
+#endif
 
 //**************************************************
 
@@ -2565,14 +2570,14 @@ static void lcd_utilities_menu()
     START_MENU();
     MENU_ITEM(back, "BACK", lcd_main_menu);
     MENU_ITEM(function, "HOME HEAD", goto_home);
-#ifdef ENABLE_AUTO_BED_LEVELING
+// #ifdef ENABLE_AUTO_BED_LEVELING
 // #ifdef TEST    
 //     MENU_ITEM(submenu, MSG_AUTO_LEVEL, heating_for_leveling);
 // #else
     MENU_ITEM(submenu, "BED LEVELING", manual_leveling);
 // #endif    
 
-#endif
+// #endif
    /**************************************************
 #ifdef ENABLE_Z_OFFSET    
     MENU_ITEM(submenu, "Setting Z-offset", edit_level_offset);

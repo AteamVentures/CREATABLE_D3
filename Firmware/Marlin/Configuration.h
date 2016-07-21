@@ -419,12 +419,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define Z_MAX_LENGTH (Z_MAX_POS - Z_MIN_POS)
 //============================= Bed Auto Leveling ===========================
 
-#define ENABLE_AUTO_BED_LEVELING // Delete the comment to enable (remove // at the start of the line)
+// #define ENABLE_AUTO_BED_LEVELING // Delete the comment to enable (remove // at the start of the line)
 
 #ifdef ENABLE_AUTO_BED_LEVELING
 
-// TODO
-#define OFFSET 0 // 85
+ // TODO
+ #define OFFSET 0 // 85
  // these are the positions on the bed to do the probing
  #define DELTA_PROBABLE_RADIUS (DELTA_PRINTABLE_RADIUS - 26)
   // #define DELTA_PROBABLE_RADIUS (DELTA_PRINTABLE_RADIUS + 5)
@@ -529,7 +529,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 98}
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 160} // K800
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 73}  // 17HS16-2004S
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 91.13}  // 17HS24-2104S
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 91.13}  // 17HS24-2104S
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 96.44}  // 17HS24-2104S
 
 // Original
 //#define DEFAULT_MAX_FEEDRATE          {500, 500, 500, 25}    // (mm/sec)
