@@ -1,4 +1,10 @@
 Firmware Change History
+Ver. 1.0.9
+-. PID tuning
+-. Chage Kp, Ki, Kd value
+-. Chage PID_MAX Value
+-. Chage PID_FUNCTIONAL_RANGE from 10 to 30
+
 Ver. 1.0.8
 -. Change DEFAULT_AXIS_STEPS_PER_UNIT Constant for feeder in Configuration.h
 -. Auto Leveling Code is Disabled

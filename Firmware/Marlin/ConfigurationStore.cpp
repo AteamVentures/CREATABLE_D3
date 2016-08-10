@@ -372,9 +372,12 @@ void Config_ResetDefault()
     preheatHPBTemp = PLA_PREHEAT_HPB_TEMP;
     preheatFanSpeed = PLA_PREHEAT_FAN_SPEED;
 
+#ifdef TEST_PID
+    heat_hold_minute = 60;
+#else    
     heat_hold_minute = 10;
-
     firstTimeRunPhase = 0;
+#endif
 
     brightValue = 100;
 
