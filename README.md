@@ -6,7 +6,7 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 ####폴더 설명
  - Hardware : Mainboard, OLED board, Heat bed 회도로 및 PCB 파일 (Mainboard는 Cadence의 Allegro로 작업이되어 있고 나머지는 Eagle CAD로 작업)
  - Firmware : Mainboard firmware 
-   - File Path : CREATABLE_D3/Firmware/D3 Firmware Ver1.0.4_160713.hex
+   - File Path : CREATABLE_D3/Firmware/D3_Firmware_Ver1.0.9_160810.hex
    - Upload with CURA
  - stk500v2 : 메인 보드 ATmega2560 bootloader
  
