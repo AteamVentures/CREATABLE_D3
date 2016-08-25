@@ -1,4 +1,8 @@
 Firmware Change History
+Ver. 1.1.0
+-. Comment Utilities > Clean Nozzle Function
+-. Change Manual Z Home Position from 232 to 230 for changed bed clip
+
 Ver. 1.0.9
 -. PID tuning
 -. Change Kp, Ki, Kd value

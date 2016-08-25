@@ -16,7 +16,7 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "Version 1.0.9" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Version 1.1.0" // Who made the changes.
 
 // #define TEST_PID
 
@@ -495,7 +495,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
 
-#define MANUAL_Z_HOME_POS 232// 163 for Tefron 8t magnet, 170 for 4t donut magnet  //175  // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 230// 163 for Tefron 8t magnet, 170 for 4t donut magnet  //175  // For delta: Distance between nozzle and print surface after homing.
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 #define HOMING_FEEDRATE {150*60, 150*60, 150*60, 0}  // set the homing speeds (mm/min)

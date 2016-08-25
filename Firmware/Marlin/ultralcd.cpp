@@ -2587,7 +2587,7 @@ static void lcd_utilities_menu()
 
     MENU_ITEM(submenu, "TEMPERATURE", lcd_control_temperature_menu);
     // MENU_ITEM(submenu, "System", lcd_info_settings)
-    MENU_ITEM(submenu, "CLEAN NOZZLE", clean_nozzle);      
+    // MENU_ITEM(submenu, "CLEAN NOZZLE", clean_nozzle);      
     
 
     END_MENU();
