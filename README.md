@@ -9,10 +9,10 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 	1. USB 케이블로 프린터와 컴퓨터를 연결합니다.
 	2. 위 링크에서 받은 파일의 압축을 풉니다.
 	3. 큐라를 실행하고 메인 메뉴의 Machine > Install Custom Firmware... 를 실행합니다.
-	4. 2번 과정에서 나온 Hex 파일을 선택하고 열기를 클립합니다.
+	4. 2번 과정에서 나온 Hex 파일을 선택하고 열기를 클릭합니다.
 	5. 업로딩이 끝날 때 까지 기다립니다.
 	6. 업로딩 완료 후 프린터의 메뉴를 조작하여 INFO/SETTINGS > RESTORE DEFAULT 를 실행합니다.
-	7. 실행 후 First run 안내에 따라 레벨링 및 필라멘트 삽입을 해 줍니다. 기존에 완료 되어있다면 추가적인 작업없이 버튼을 계속 눌러 넘어가줍니다.
+	7. 실행 후 First run 안내에 따라 레벨링 및 필라멘트 삽입을 해 줍니다. 기존에 완료 되어있다면 추가적인 작업없이 버튼을 계속 눌러 넘어갑니다.
 	8. INFO/SETTINGS > FIRMWARE VERSION을 실행하여 버전정보를 확인합니다.
 	  
  - stk500v2 : 메인 보드 ATmega2560 bootloader
