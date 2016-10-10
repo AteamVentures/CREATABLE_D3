@@ -3,7 +3,7 @@
 Ver. 1.1.1
 
 - When get serial data, reset the heat-hold-count.
-- Change default heat-hold-time from 10 minutes to 30 minutes.
+- Change the default heat-hold-time from 10 minutes to 30 minutes.
 
 Ver. 1.1.0
 
