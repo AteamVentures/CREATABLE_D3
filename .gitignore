@@ -29,3 +29,5 @@
 *.app
 *.hex
 *.elf
+Makefile
+
