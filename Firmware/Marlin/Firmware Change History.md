@@ -26,7 +26,6 @@ Ver. 1.0.7
 
 - Filament load function debug
 - Enable/Disable Unlimit Heating Code add 
-	
 	- V130 : Enable Unlimit Heating
 	- V131 : Disable Unlimit Heating	
 - Change wording (Select Filament)
