@@ -16,7 +16,7 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "Version 1.1.0" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Version 1.1.1" // Who made the changes.
 
 // #define TEST_PID
 
@@ -39,6 +39,8 @@
 #define FILAMENT_UNLOAD_SPEED       200
 #define FILAMENT_LOAD_SPEED         200
 #define FILAMENT_MOVE_ACCELERATION   30
+
+#define DEFAULT_HEAT_HOLD_MINUTE      30
 
 // #ifdef TEST     // Not used
 // #define LEVELING_TEMP 200

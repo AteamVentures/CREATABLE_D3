@@ -5,7 +5,7 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 ![image](http://ateamventures.com/wp2/wp-content/themes/ateamventures/img/intro/intro3-1.png)
 ####폴더 설명
  - Hardware : Mainboard, OLED board, Heat bed 회도로 및 PCB 파일 (Mainboard는 Cadence의 Allegro로 작업이되어 있고 나머지는 Eagle CAD로 작업)
- - Firmware : Mainboard firmware [Download](https://github.com/AteamVentures/CREATABLE_D3/raw/master/Firmware/D3_Firmware_Ver1.1.0_160825.zip)  
+ - Firmware : Mainboard firmware [Download](https://github.com/AteamVentures/CREATABLE_D3/raw/master/Firmware/D3_Firmware.zip)  
 	1. USB 케이블로 프린터와 컴퓨터를 연결합니다.
 	2. 위 링크에서 받은 파일의 압축을 풉니다.
 	3. 큐라를 실행하고 메인 메뉴의 Machine > Install Custom Firmware... 를 실행합니다.

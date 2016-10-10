@@ -657,6 +657,8 @@ void loop()
 void get_command()
 {
   while( MYSERIAL.available() > 0  && buflen < BUFSIZE) {
+      heatCount = millis();
+
     serial_char = MYSERIAL.read();
     if(serial_char == '\n' ||
        serial_char == '\r' ||

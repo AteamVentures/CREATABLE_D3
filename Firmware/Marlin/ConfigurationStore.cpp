@@ -375,7 +375,7 @@ void Config_ResetDefault()
 #ifdef TEST_PID
     heat_hold_minute = 60;
 #else    
-    heat_hold_minute = 10;
+    heat_hold_minute = DEFAULT_HEAT_HOLD_MINUTE;
     firstTimeRunPhase = 0;
 #endif
 
