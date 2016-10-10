@@ -2137,7 +2137,17 @@ void process_commands()
       if(setTargetedHotend(104)){
         break;
       }
-      if (code_seen('S')) setTargetHotend(code_value(), tmp_extruder);
+      if (code_seen('S')) {
+        #ifdef AUTO_HEAT_HOLD_DISABLE
+        if(code_value() == 0){
+          heatUnlimit = false;
+        }else if(code_value() > 0){
+
+          heatUnlimit = true;
+        }
+        #endif
+        setTargetHotend(code_value(), tmp_extruder);
+      }
 #ifdef DUAL_X_CARRIAGE
       if (dual_x_carriage_mode == DXC_DUPLICATION_MODE && tmp_extruder == 0)
         setTargetHotend1(code_value() == 0.0 ? 0.0 : code_value() + duplicate_extruder_temp_offset);
@@ -2145,7 +2155,17 @@ void process_commands()
       setWatch();
       break;
     case 140: // M140 set bed temp
-      if (code_seen('S')) setTargetBed(code_value());
+      if (code_seen('S')) {
+        #ifdef AUTO_HEAT_HOLD_DISABLE
+        if(code_value() == 0){
+          heatUnlimit = false;
+        }else if(code_value() > 0){
+
+          heatUnlimit = true;
+        }
+        #endif
+        setTargetBed(code_value());
+      }
       break;
     case 105 : // M105
       if(setTargetedHotend(105)){
@@ -2223,6 +2243,14 @@ void process_commands()
         autotemp_enabled=false;
       #endif
       if (code_seen('S')) {
+        #ifdef AUTO_HEAT_HOLD_DISABLE
+        if(code_value() == 0){
+          heatUnlimit = false;
+        }else if(code_value() > 0){
+
+          heatUnlimit = true;
+        }
+        #endif
         setTargetHotend(code_value(), tmp_extruder);
 #ifdef DUAL_X_CARRIAGE
         if (dual_x_carriage_mode == DXC_DUPLICATION_MODE && tmp_extruder == 0)
@@ -2316,6 +2344,14 @@ void process_commands()
     #if defined(TEMP_BED_PIN) && TEMP_BED_PIN > -1
         // LCD_MESSAGEPGM(MSG_BED_HEATING);
         if (code_seen('S')) {
+          #ifdef AUTO_HEAT_HOLD_DISABLE
+        if(code_value() == 0){
+          heatUnlimit = false;
+        }else if(code_value() > 0){
+
+          heatUnlimit = true;
+        }
+        #endif
           setTargetBed(code_value());
           CooldownNoWait = true;
         } else if (code_seen('R')) {

@@ -42,6 +42,8 @@
 
 #define DEFAULT_HEAT_HOLD_MINUTE      30
 
+#define AUTO_HEAT_HOLD_DISABLE
+
 // #ifdef TEST     // Not used
 // #define LEVELING_TEMP 200
 // #endif
