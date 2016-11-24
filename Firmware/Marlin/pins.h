@@ -1487,7 +1487,7 @@
 
 #define LED_PIN            13
 
-#define FAN_PIN            7
+#define FAN_PIN            -1//7
 //#define FAN_PIN            8
 //additional FAN1 PIN (e.g. useful for electronics fan or light on/off) on PIN 8
 

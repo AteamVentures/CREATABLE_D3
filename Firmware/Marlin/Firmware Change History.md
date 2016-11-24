@@ -1,4 +1,9 @@
 ##Firmware Change History
+Ver. 1.1.2
+
+- Auto fan control enable. Nozzle temperature is under 50 celcius degrees, fan will be turned off.
+- When get serial data, motor will be hold. Originally, motor hold time was 60 seconds. However, we change it to 6000 seconds. 
+
 
 Ver. 1.1.1
 
