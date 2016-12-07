@@ -1,4 +1,7 @@
 ##Firmware Change History
+Ver. 1.1.3
+- Change Error Temperature from 5 to -80
+
 Ver. 1.1.2
 
 - Auto fan control enable. Nozzle temperature is under 50 celcius degrees, fan will be turned off.

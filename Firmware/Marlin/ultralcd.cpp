@@ -182,7 +182,9 @@ static void filament_setting();
 
 static void filament_load();
 
-
+static void lcd_skip_firstTime();
+// static void lcd_firstTime_set();
+static void lcd_firstTime_start();
 static void lcd_firstTime_leveling();
 static void lcd_firstTime_filament_load();
 static void lcd_firstTime_greeting();
@@ -374,8 +376,37 @@ float raw_Ki, raw_Kd;
 
 /* Main status screen. It's up to the implementation specific part to show what is needed. As this is very display dependend */
 
+static void lcd_skip_firstTime(){
+    firstTimeRunPhase = 4;
+    Config_StoreSettings();
+    currentMenu = lcd_status_screen; 
 
+}
 
+// static void lcd_firstTime_set(){
+
+//     currentMenu = lcd_firstTime_start;
+
+// }
+
+static void lcd_firstTime_start(){
+    currentMenu = lcd_firstTime_start;
+    lcd_implementation_draw_string(0, "Welcome. This is the");
+    lcd_implementation_draw_string(1, "firsttime use guide.");
+    lcd_implementation_draw_string(2, "Please follow steps.");
+    
+    lcd_implementation_draw_string(3, "PUSH BUTTON TO NEXT ");
+    if (LCD_CLICKED)
+    {
+        // currentMenu = lcd_status_screen;
+        encoderPosition = 0;
+        lcd_quick_feedback();
+        firstTimeRunPhase++;
+        currentMenu = lcd_status_screen; 
+
+    }
+
+}
 
 static void lcd_firstTime_leveling(){
     lcd_implementation_draw_string(0, "First step is");
@@ -434,19 +465,29 @@ static void lcd_status_screen()
     switch(firstTimeRunPhase){
         case 0:
             prevent_lcd_update = true;
-            // lcd_update();
-            lcd_implementation_draw_string(0, "Welcome. This is the");
-            lcd_implementation_draw_string(1, "firsttime use guide.");
-            lcd_implementation_draw_string(2, "Please follow steps.");
+
+            lcd_implementation_draw_string(0, "YES to level the bed");
+            lcd_implementation_draw_string(1, "and load filament.  ");
+
+            START_MENU();
+
+            MENU_ITEM_CUSTOM(function, "YES", 2, lcd_firstTime_start);
+            MENU_ITEM_CUSTOM(function, "SKIP", 3, lcd_skip_firstTime);
+
+            END_MENU();
+            // // lcd_update();
+            // lcd_implementation_draw_string(0, "Welcome. This is the");
+            // lcd_implementation_draw_string(1, "firsttime use guide.");
+            // lcd_implementation_draw_string(2, "Please follow steps.");
             
-            lcd_implementation_draw_string(3, "PUSH BUTTON TO NEXT ");
-            if (LCD_CLICKED)
-            {
-                // currentMenu = lcd_status_screen;
-                encoderPosition = 0;
-                lcd_quick_feedback();
-                firstTimeRunPhase++;
-            }
+            // lcd_implementation_draw_string(3, "PUSH BUTTON TO NEXT ");
+            // if (LCD_CLICKED)
+            // {
+            //     // currentMenu = lcd_status_screen;
+            //     encoderPosition = 0;
+            //     lcd_quick_feedback();
+            //     firstTimeRunPhase++;
+            // }
         break;
 
         case 1:
