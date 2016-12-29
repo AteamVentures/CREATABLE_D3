@@ -28,4 +28,4 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 
 - 프린터를 사용하기 위해 모델 파일(stl, obj 등)을 Gcode로 변환하는 슬라이싱 과정이 필요하다. 이를 위해 슬라이싱 소프트웨어인 Cura CREATABLE Edition을 제공하고 있다.
 - Cura CREATABLE Edition에 대한 정보는 다음 링크에서 확인가능하다.
-- [Cura CREATABLE Edition ](https://github.com/AteamVentures/CuraCreatableEdition)
+- [Cura CREATABLE Edition 링크](https://github.com/AteamVentures/CuraCreatableEdition)
