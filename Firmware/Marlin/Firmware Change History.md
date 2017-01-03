@@ -1,4 +1,8 @@
 ##Firmware Change History
+Ver. 1.1.4
+- Fix pin mapping for LED R and G of changed mainboard(Ver 1.2)
+- Add definition for select cases => #define BALL_BARING_FAN & #define BOARD_VER1_2
+
 Ver. 1.1.3
 - Change Error Temperature from 5 to -80
 

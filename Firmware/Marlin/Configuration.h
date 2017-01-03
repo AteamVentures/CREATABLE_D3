@@ -16,7 +16,7 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "Version 1.1.3" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Version 1.1.4" // Who made the changes.
 
 // #define TEST_PID
 
@@ -43,6 +43,10 @@
 #define DEFAULT_HEAT_HOLD_MINUTE      30
 
 #define AUTO_HEAT_HOLD_DISABLE
+
+#define BOARD_VER1_2
+// #define BALL_BARING_FAN    // settings for ball baring fan (PID, Max Flow)
+
 
 // #ifdef TEST     // Not used
 // #define LEVELING_TEMP 200
@@ -263,10 +267,19 @@
 //    #define  DEFAULT_Ki 0.29
 //    #define  DEFAULT_Kd 33.66
 
+#ifndef BALL_BARING_FAN
 // Creatable-D3
     #define  DEFAULT_Kp 6.74
     #define  DEFAULT_Ki 0.54
     #define  DEFAULT_Kd 20.99
+#else
+// New Fan TEST
+    #define  DEFAULT_Kp 5.13
+    #define  DEFAULT_Ki 0.27
+    #define  DEFAULT_Kd 24.80
+
+#endif
+
 
 #endif // PIDTEMP
 

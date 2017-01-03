@@ -1571,10 +1571,20 @@
 #define IN1    14
 */
 
+
+#ifdef BOARD_VER1_2
 // LED strip
+#define LED_R       6// old version(none pwm) pin is 21
+#define LED_G       8// old version(none pwm) pin is 20
+#define LED_B       4
+
+#else
+
 #define LED_R       21
 #define LED_G       20
 #define LED_B       4
+
+#endif
 
 
 #endif //MOTHERBOARD==80

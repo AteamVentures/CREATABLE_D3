@@ -79,8 +79,12 @@
 #define EXTRUDER_1_AUTO_FAN_PIN   -1
 #define EXTRUDER_2_AUTO_FAN_PIN   -1
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 50
-#define EXTRUDER_AUTO_FAN_SPEED   255  // == full speed
 
+#ifdef BALL_BARING_FAN
+#define EXTRUDER_AUTO_FAN_SPEED   128  // == half speed
+#else
+#define EXTRUDER_AUTO_FAN_SPEED   255  // == full speed
+#endif
 
 //===========================================================================
 //=============================Mechanical Settings===========================
