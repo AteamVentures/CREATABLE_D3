@@ -23,7 +23,7 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 
 - To use the printer, a slicing process is required to convert model files (stl, obj, etc.) to Gcode. To do this, we offer Cura CREATABLE Edition, a slicing software.
 - Information on the Cura CREATABLE Edition can be found at the following link.
-- [Cura CREATABLE Edition 링크](https://github.com/AteamVentures/CuraCreatableEdition)
+- [Cura CREATABLE Edition](https://github.com/AteamVentures/CuraCreatableEdition)
 
 ####폴더 설명
  - Hardware : Mainboard, OLED board, Heat bed 회도로 및 PCB 파일 (Mainboard는 Cadence의 Allegro로 작업이되어 있고 나머지는 Eagle CAD로 작업)
