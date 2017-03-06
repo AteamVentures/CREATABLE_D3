@@ -3,6 +3,28 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 [creatablelabs.com](http://creatablelabs.com/)
 
 ![image](http://ateamventures.com/wp2/wp-content/themes/ateamventures/img/intro/intro3-1.png)
+
+####Folder Description
+ - Hardware : Mainboard, OLED board, Heat bed circuit board and PCB file (The mainboard is working with Allegro of Cadence and the rest is working with Eagle CAD)
+ - Firmware : Mainboard firmware [Download](https://github.com/AteamVentures/CREATABLE_D3/raw/master/Firmware/D3_Firmware.zip)  
+	1. Connect the printer and computer with the USB cable.
+	2. Unzip the file you received from the link above.
+	3. Run Cue and execute Machine> Install Custom Firmware ... from the main menu.
+	4. Select the hex file from step 2 and click Open.
+	5. Wait for uploading to finish.
+	6. After completing the upload, operate the printer's menu to execute INFO / SETTINGS> RESTORE DEFAULT.
+	7. Execute the leveling and filament insertion according to the first run instructions. If you have already done so, continue to press the button without further action.
+	8. Execute INFO / SETTINGS> FIRMWARE VERSION to check the version information.
+	  
+ - stk500v2 : This it the ATmega2560 bootloader of main board.
+ 
+
+#### Cura CREATABLE Edition
+
+- To use the printer, a slicing process is required to convert model files (stl, obj, etc.) to Gcode. To do this, we offer Cura CREATABLE Edition, a slicing software.
+- Information on the Cura CREATABLE Edition can be found at the following link.
+- [Cura CREATABLE Edition 링크](https://github.com/AteamVentures/CuraCreatableEdition)
+
 ####폴더 설명
  - Hardware : Mainboard, OLED board, Heat bed 회도로 및 PCB 파일 (Mainboard는 Cadence의 Allegro로 작업이되어 있고 나머지는 Eagle CAD로 작업)
  - Firmware : Mainboard firmware [Download](https://github.com/AteamVentures/CREATABLE_D3/raw/master/Firmware/D3_Firmware.zip)  
