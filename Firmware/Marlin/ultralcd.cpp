@@ -15,6 +15,7 @@ char step = 0;
 char z_setup = 0;
 float zoffset[3] = {0.0, 0.0, 0.0};
 int manualLevelingDelay = 300;
+int manualHomeDelay = 300;
 
 int8_t encoderDiff; /* encoderDiff is updated from interrupt context and added to encoderPosition every LCD update */
 
@@ -1105,6 +1106,11 @@ static void filament_load()
     char buffer[20];
     float target_temp;
 
+    // if(!onetime_flag){
+    //     enquecommand_P(PSTR("G28"));
+    //     onetime_flag = true;
+    // }
+
     if (degHotend(active_extruder) >= preheatHotendTemp) target_temp = degHotend(active_extruder) + 10;//preheatHotendTemp + 10;// degHotend(active_extruder) + 10;
     else target_temp = preheatHotendTemp;
 
@@ -1162,10 +1168,38 @@ static void filament_load()
     }
 }
 
+static void filament_load_home(){
+    if(!onetime_flag){
+        enquecommand_P(PSTR("G28"));
+        onetime_flag = true;
+    }
+    lcd_implementation_draw_string(0, "  READY TO LOAD     ");
+    lcd_implementation_draw_string(1, "      THE FILAMENT? ");
+    lcd_implementation_draw_string(2, "                    ");
+    lcd_implementation_draw_string(3, " CLICK TO CONTINUE  ");
+
+    if (LCD_CLICKED)
+    {
+        lcd_implementation_draw_string(0, "                    ");
+        lcd_implementation_draw_string(1, "                    ");
+        lcd_implementation_draw_string(2, "                    ");
+        lcd_implementation_draw_string(3, "                    ");
+        currentMenu = filament_load;
+        encoderPosition = 0;
+        delay(manualHomeDelay);
+        return;
+    }
+}
 
 static void filament_unload()
 {
     char buffer[20];
+
+    // if(!onetime_flag){
+    //     enquecommand_P(PSTR("G28"));
+    //     onetime_flag = true;
+    // }
+
 
     setTargetHotend(preheatHotendTemp, active_extruder);
     while(degHotend(active_extruder) < preheatHotendTemp){
@@ -1208,7 +1242,28 @@ static void filament_unload()
     currentMenu = lcd_status_screen;
 }
 
+static void filament_unload_home(){
+    if(!onetime_flag){
+        enquecommand_P(PSTR("G28"));
+        onetime_flag = true;
+    }    lcd_implementation_draw_string(0, "  READY TO UNLOAD   ");
+    lcd_implementation_draw_string(1, "      THE FILAMENT? ");
+    lcd_implementation_draw_string(2, "                    ");
+    lcd_implementation_draw_string(3, " CLICK TO CONTINUE  ");
 
+    if (LCD_CLICKED)
+    {
+        lcd_implementation_draw_string(0, "                    ");
+        lcd_implementation_draw_string(1, "                    ");
+        lcd_implementation_draw_string(2, "                    ");
+        lcd_implementation_draw_string(3, "                    ");
+        currentMenu = filament_unload;
+        encoderPosition = 0;
+        delay(manualHomeDelay);
+        return;
+    }
+    
+}
 
 #ifdef ENABLE_MOVE_MENU
 float move_menu_scale;
@@ -1866,8 +1921,8 @@ static void filament_change()
 {
     START_MENU();   
     MENU_ITEM(back, MSG_BACK, lcd_filament_menu);
-    MENU_ITEM(submenu, "LOAD FILAMENT", filament_load);
-    MENU_ITEM(submenu, "UNLOAD FILAMENT", filament_unload);
+    MENU_ITEM(submenu, "LOAD FILAMENT", filament_load_home);
+    MENU_ITEM(submenu, "UNLOAD FILAMENT", filament_unload_home);
     // MENU_ITEM(submenu, "LOAD FILAMENT", filament_load_new);
     // MENU_ITEM(submenu, "UNLOAD FILAMENT", filament_unload);
     
@@ -3490,6 +3545,9 @@ void set_led_strip_color(int red, int green, int blue)
   analogWrite(LED_R, (int)(float(red)  / 100.0  * float(brightValue)));
   analogWrite(LED_G, (int)(float(green)  / 100.0  * float(brightValue)));
   analogWrite(LED_B, (int)(float(blue)  / 100.0  * float(brightValue)));
+  
+  analogWrite(LED_R_NONE_PWM, (int)(float(red)  / 100.0  * float(brightValue)));
+  analogWrite(LED_G_NONE_PWM, (int)(float(green)  / 100.0  * float(brightValue)));
 }
 #endif
 

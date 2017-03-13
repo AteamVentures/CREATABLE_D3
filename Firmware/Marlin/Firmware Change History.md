@@ -1,4 +1,8 @@
 ##Firmware Change History
+Ver. 1.1.5
+- Supports LED pin of both mainboards(Ver 1.1 & 1.2)
+- Add Go home movement before Load / Unload Filament
+
 Ver. 1.1.4
 - Fix pin mapping for LED R and G of changed mainboard(Ver 1.2)
 - Add definition for selecting cases => #define BALL_BARING_FAN & #define BOARD_VER1_2

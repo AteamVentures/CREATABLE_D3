@@ -1570,8 +1570,15 @@
 #define IN2    15        
 #define IN1    14
 */
+// LED strip
+#define LED_R       6// old version(none pwm) pin is 21
+#define LED_G       8// old version(none pwm) pin is 20
+#define LED_B       4
+#define LED_R_NONE_PWM 21
+#define LED_G_NONE_PWM 20
 
 
+#if 0
 #ifdef BOARD_VER1_2
 // LED strip
 #define LED_R       6// old version(none pwm) pin is 21
@@ -1584,6 +1591,7 @@
 #define LED_G       20
 #define LED_B       4
 
+#endif
 #endif
 
 
