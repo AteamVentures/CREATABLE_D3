@@ -1,4 +1,7 @@
 ##Firmware Change History
+Ver. 1.1.6
+- Fix the wrong retraction speed set after load the filament
+
 Ver. 1.1.5
 - Supports LED pin of both mainboards(Ver 1.1 & 1.2)
 - Add Go home movement before Load / Unload Filament

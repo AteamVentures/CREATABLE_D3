@@ -1045,7 +1045,8 @@ static void forward_feeding()
         plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], (n+1)*(FILAMENT_LOAD_LEN)/divisionNumber, FILAMENT_LOAD_SPEED, active_extruder);
     }
 
-
+    max_feedrate[E_AXIS] = old_max_feedrate_e;
+    retract_acceleration = old_retract_acceleration;
     // while(current_position[E_AXIS] < FILAMENT_LOAD_LEN - 50){
     //     if(LCD_CLICKED){
     //         lcd_cooldown();
