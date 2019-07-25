@@ -51,4 +51,4 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 - Cura CREATABLE Edition에 대한 정보는 다음 링크에서 확인가능하다.
 - To use the printer, a slicing process is required to convert model files (stl, obj, etc.) into Gcode. To do this, we offer Cura CREATABLE Edition (Cutomized Cura).
 - Information about the Cura CREATABLE Edition can be found at the following link.
-- [Cura CREATABLE Edition 링크](https://github.com/AteamVentures/CuraCreatableEdition)
+- [Cura CREATABLE Edition Link](https://github.com/AteamVentures/CuraCreatableEdition)
