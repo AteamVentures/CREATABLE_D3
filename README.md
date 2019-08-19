@@ -4,6 +4,10 @@ The Perfect 3D Printer for Beginners, Educators and Experts.
 
 <img src="./Doc/Creatable_D3.png" width="200" height="361">
 
+## Open Source Hardware
+This product is certified open source hardware. 
+[https://certification.oshwa.org/kr000001.html](https://certification.oshwa.org/kr000001.html)
+
 #### Folder Description
  - Hardware : Mainboard, OLED board, Heat bed circuit board and PCB file (The mainboard is working with Allegro of Cadence and the rest is working with Eagle CAD)
  - Firmware : Mainboard firmware [Download](https://github.com/AteamVentures/CREATABLE_D3/raw/master/Firmware/D3_Firmware.zip)  
