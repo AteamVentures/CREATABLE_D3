@@ -1,0 +1,9 @@
+# dxfimport generated script file.
+Grid mic 1 off;
+Set Wire_Bend 2;
+CHANGE LAYER 26;
+Change Font Vector;
+# Skipped Section Search
+Window Fit;
+# lines=0, arcs=0, circles=0, polylines=1
+Grid last;
